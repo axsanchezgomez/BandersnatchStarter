@@ -28,8 +28,6 @@ class Database:
     >>> html = db.html_table()
     >>> "<table" in html
     True
-    >>> db.reset()
-    True
     """
     load_dotenv()
     client = MongoClient(getenv("DB_URL"), tlsCAFile=where())["MonstersDB"]
@@ -91,9 +89,5 @@ class Database:
         return html
 
 
-if __name__ == '__main__':
-    # doctest.testmod()
-    db = Database("Random Monsters")
-    db.seed(10)
-    db.dataframe()
-    db.html_table()
+
+

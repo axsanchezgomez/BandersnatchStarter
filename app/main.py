@@ -5,7 +5,6 @@ from Fortuna import random_int, random_float
 from MonsterLab import Monster
 from flask import Flask, render_template, request
 from pandas import DataFrame
-
 from app.data import Database
 from app.graph import chart
 from app.machine import Machine
@@ -40,7 +39,7 @@ def data():
 def view():
     if SPRINT < 2:
         return render_template("view.html")
-    db = Database("Random Monsters")
+    db = Database()
     options = ["Level", "Health", "Energy", "Sanity", "Rarity"]
     x_axis = request.values.get("x_axis") or options[1]
     y_axis = request.values.get("y_axis") or options[2]
@@ -98,3 +97,5 @@ def model():
 
 if __name__ == '__main__':
     APP.run()
+
+
