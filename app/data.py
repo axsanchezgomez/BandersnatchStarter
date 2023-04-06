@@ -89,5 +89,10 @@ class Database:
         return html
 
 
+# if __name__ == '__main__':
+#     db = Database("Random Monsters")
+#     db.seed(900)
+
+
 
 
