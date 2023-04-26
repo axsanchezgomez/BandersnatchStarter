@@ -88,11 +88,3 @@ class Database:
         html = dataframe.to_html(index=False)
         return html
 
-
-# if __name__ == '__main__':
-#     db = Database("Random Monsters")
-#     db.seed(900)
-
-
-
-
